@@ -1,2 +1,2 @@
 angular.module("env", [])
-.constant("APIURL", "https://laryssamagalhaes.github.io/angular-step/");
+.constant("APIURL", "http://localhost:3000/");
