@@ -1,0 +1,40 @@
+<md-step-body>
+  <md-content layout-padding class="default-content">
+    <p>Review</p>
+    <div layout="row" layout-xs="column" layout-align="space-between">
+      <md-input-container flex="45" flex-xs="100">
+        <label>Your favorite comic book superhero</label>
+        <input name="clientName" value="{{ $ctrl.formvalues.superHero }}" ng-disabled="true">
+      </md-input-container>
+      <md-input-container flex="45" flex-xs="100">
+        <label>Tv Series that you are currently watching</label>
+        <input name="clientName" value="{{ $ctrl.formvalues.serie }}" ng-disabled="true">
+      </md-input-container>
+    </div>
+    <div layout="row" layout-xs="column" layout-align="space-between">
+      <md-input-container flex="45" flex-xs="100">
+        <label>Wich one do you use: Bolacha  or biscoito?</label>
+        <input name="clientName" value="{{ $ctrl.formvalues.bolachaOrBiscoito }}" ng-disabled="true">
+      </md-input-container>
+      <md-input-container flex="45" flex-xs="100">
+        <label>Watch is the best quote ever</label>
+        <input name="clientName" value="{{ $ctrl.formvalues.quoute }}" ng-disabled="true">
+      </md-input-container>
+    </div>
+     <md-radio-group ng-model="$ctrl.selected" ng-change="$ctrl.showEpisodes()" layout="row" layout-xs="column" layout-align="space-between">
+        <div layout="column">
+          <p class="size-title">Your favorite Star Wars Movie</p>
+          <md-radio-button value="{{$ctrl.starWars.id}}" class="md-primary" ng-disabled="true">{{$ctrl.starWars.name}}</md-radio-button>
+        </div>
+        <div layout="column">
+          <p class="size-title">Your favorite Got Season</p>
+          <md-radio-button value="{{$ctrl.gotSeason}}" class="md-primary" ng-disabled="true">{{$ctrl.gotSeason}}</md-radio-button>
+        </div>
+        <div layout="column">
+          <p class="size-title">Your kind of food</p>   
+          <md-radio-button value="{{$ctrl.food.id}}" class="md-primary" ng-disabled="true">{{$ctrl.food.name}}</md-radio-button>
+        </div>
+    </md-radio-group>
+  </md-content>
+</md-step-body>
+<div ng-transclude></div>

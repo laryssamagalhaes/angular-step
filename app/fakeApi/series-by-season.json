@@ -1,0 +1,105 @@
+[
+
+			{
+				"id": 1,
+				"episodes": [
+					{
+						"id": 1,
+						"title": "Winter Is Coming",
+						"released": "17/04/2011",
+						"rating": "8,5"
+					},
+					{
+						"id": 2,
+						"title": "The Kingsroad",
+						"released": "24/04/2011",
+						"rating": "8,7"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"episodes": [
+					{
+						"id": 1,
+						"title": "The North Remembers",
+						"released": "01/04/2012",
+						"rating": "7,9"
+					},
+					{
+						"id": 2,
+						"title": "The Night Lands",
+						"released": "08/04/2012",
+						"rating": "8,8"
+					}
+				]
+			},
+			{
+				"id": 3,
+				"episodes": [
+					{
+						"id": 1,
+						"title": "Valar Dohaeris",
+						"released": "31/03/2013",
+						"rating": "9,1"
+					},
+					{
+						"id": 2,
+						"title": "Dark Wings, Dark Words",
+						"released": "07/04/2013",
+						"rating": "8,3"
+					}
+				]
+			},
+			{
+				"id": 4,
+				"episodes": [
+					{
+						"id": 1,
+						"title": "Two Swords",
+						"released": "06/04/2014",
+						"rating": "8,6"
+					},
+					{
+						"id": 2,
+						"title": "The Lion and the Rose",
+						"released": "13/04/2014",
+						"rating": "9,3"
+					}
+				]
+			},
+			{
+				"id": 5,
+				"episodes": [
+					{
+						"id": 1,
+						"title": "The Wars to Come",
+						"released": "12/04/2015",
+						"rating": "9,7"
+					},
+					{
+						"id": 2,
+						"title": "The House of Black and White",
+						"released": "19/04/2015",
+						"rating": "9,2"
+					}
+				]
+			},
+			{
+				"id": 6,
+				"episodes": [
+					{
+						"id": 1,
+						"title": "The Red Woman",
+						"released": "24/04/2014",
+						"rating": "7,8"
+					},
+					{
+						"id": 2,
+						"title": "Home",
+						"released": "01/05/2014",
+						"rating": "8,8"
+					}
+				]
+			}
+]

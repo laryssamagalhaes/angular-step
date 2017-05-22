@@ -1,0 +1,63 @@
+<md-step-body>
+  <md-content layout-padding class="default-content">
+    <p>{{$ctrl.title}}</p>
+    <md-radio-group ng-model="selected">
+      <div layout="row" layout-wrap>
+        <div flex="25" layout-align="center">
+          <div layout="row" layout-align="center center">
+            <img class="space-radio" ng-class="{'img-radius': $ctrl.radius}" src="http://placehold.it/100">
+          </div>
+          <div layout="row" layout-align="center center">
+            <md-radio-button value="teste" class="md-primary"></md-radio-button>
+          </div>
+          <p class="center">FILME DE CABAÇO.</p>
+        </div>
+
+        <div flex="25" layout-align="center">
+          <div layout="row" layout-align="center center">
+            <img class="space-radio" src="http://placehold.it/100">
+          </div>
+          <div layout="row" layout-align="center center">
+            <md-radio-button value="teste" class="md-primary"></md-radio-button>
+          </div>
+          <p class="center">FILME DE CABAÇO.</p>
+        </div>
+
+        <div flex="25" layout-align="center">
+          <div layout="row" layout-align="center center">
+            <img class="space-radio" src="http://placehold.it/100">
+          </div>
+          <div layout="row" layout-align="center center">
+            <md-radio-button value="teste" class="md-primary"></md-radio-button>
+          </div>
+          <p class="center">FILME DE CABAÇO.</p>
+        </div>
+
+        <div flex="25" layout-align="center">
+          <div layout="row" layout-align="center center">
+            <img class="space-radio" src="http://placehold.it/100">
+          </div>
+          <div layout="row" layout-align="center center">
+            <md-radio-button value="teste" class="md-primary"></md-radio-button>
+          </div>
+          <p class="center">FILME DE CABAÇO.</p>
+        </div>
+
+        
+        <div flex="25" layout-align="center">
+          <div layout="row" layout-align="center center">
+            <img class="space-radio" src="http://placehold.it/100">
+          </div>
+          <div layout="row" layout-align="center center">
+            <md-radio-button value="teste" class="md-primary"></md-radio-button>
+          </div>
+          <p class="center">FILME DE CABAÇO.</p>
+        </div>
+      </div>
+    </md-radio-group>
+    </md-content>
+</md-step-body> 
+<md-step-actions layout="row" layout-align="space-between">
+    <md-button class="md-primary md-raised" ng-click="$ctrl.selectCampaign();">Continue</md-button>
+    <md-button class="md-primary" ng-click="$ctrl.cancel();">Cancel</md-button>
+</md-step-actions>

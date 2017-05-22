@@ -1,0 +1,47 @@
+.card {
+	max-width: 900px;
+    width: 100%;
+    margin: 31px auto auto auto;
+}
+
+.default-content {
+	padding: 16px 52px;
+
+	@media(max-width: $xs) {
+		padding: 0;
+	}
+}
+
+.center {
+	text-align: center;
+	margin: 0;
+	margin-bottom: 40px;
+}
+
+.radio-button {
+	margin-top: 10px;
+}
+
+.space-radio {
+	margin-bottom: 10px;
+}
+
+.img-radius {
+	border-radius: 50%;
+	height: 150px;
+    width: 150px;
+}
+
+.size-title {
+	font-size: 12px;
+}
+
+.sucess-message {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    font-size: 119px;
+    background: #FFF;
+}
