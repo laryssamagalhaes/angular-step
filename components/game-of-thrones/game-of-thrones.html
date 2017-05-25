@@ -2,13 +2,14 @@
   <md-content layout-padding class="default-content">
     <div layout="row" layout-xs="column">
       <div flex="25" flex-xs="100">
-        <img class="space-radio" src="http://placehold.it/150x230">
+        <img class="space-radio" width="150" height="230" src="{{ $ctrl.gameOfThrones.Poster }}">
       </div>
       <div flex="75" flex-xs="100">
-        <h2>Game of Thrones (2011)</h2>
-        <p>A Guerra dos Tronos. Game of Thrones adapta para a TV a série literária As Crônicas de Gelo e Fogo, de George R.R. Martin. A série se passa em Westeros, uma terra reminiscente da Europa Medieval, onde as estações duram por anos ou até mesmo décadas.</p>
+        <h2>{{ $ctrl.gameOfThrones.Title }}</h2>
+        <p>{{ $ctrl.gameOfThrones.Plot }}</p>
         <p>Got is an amazing TV Show. What is your favorite season?</p>
-          <md-radio-group ng-model="$ctrl.model" ng-change="$ctrl.showEpisodes()" layout="row" layout-xs="column" layout-align="space-between">
+
+        <md-radio-group ng-model="$ctrl.model" ng-change="$ctrl.getSeason()" layout="row" layout-xs="column" layout-align="space-between">
               <div layout="column" layout-align="center center">
                 <md-radio-button value="1" class="md-primary">1</md-radio-button>
               </div>
@@ -33,21 +34,21 @@
     <div layout="row" layout-margin ng-if="$ctrl.episodes">
       <div flex="100">
         <md-table-container>
-          <table md-table multiple="multiple" md-progress="promise">
+          <table md-table md-row-select multiple="multiple" ng-model="selected" md-progress="promise">
             <thead md-head md-order="query.order" md-on-reorder="getDesserts">
               <tr md-row>
-                <th md-column md-order-by="nameToLower"><span>Episode</span></th>
-                <th md-column md-numeric md-order-by="calories.value"><span>Name</span></th>
-                <th md-column md-numeric>Released</th>
-                <th md-column md-numeric>Imdb Rating</th>
+                <th md-column md-order-by="Episode"><span>Episode</span></th>
+                <th md-column md-order-by="Title"><span>Title</span></th>
+                <th md-column md-order-by="Released" md-numeric>Released</th>
+                <th md-column md-order-by="imdbRating" md-numeric>Imdb Rating</th>
               </tr>
             </thead>
             <tbody md-body>
-              <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="episode in $ctrl.episodes">
-                <td md-cell>{{ episode.id }}</td>
-                <td md-cell>{{ episode.title }}</td>
-                <td md-cell>{{ episode.released }}</td>
-                <td md-cell>{{ episode.rating }}</td>
+              <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="episode in $ctrl.episodes | orderBy: query.order">
+                <td md-cell>{{ episode.Episode }}</td>
+                <td md-cell>{{ episode.Title }}</td>
+                <td md-cell>{{ episode.Released | date:'dd/MM/yyyy'}}</td>
+                <td md-cell>{{ episode.imdbRating }}</td>
               </tr>
             </tbody>
           </table>
