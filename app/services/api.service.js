@@ -7,7 +7,7 @@
 
     /*@ngInject*/
     function apiService($http, APIURL){
-      var OMD_API_URL = "http://www.omdbapi.com/";
+      var OMD_API_URL = "https://www.omdbapi.com/";
       var OMD_API_KEY = "bd9be61b";
 
       return {
