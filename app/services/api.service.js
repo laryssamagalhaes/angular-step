@@ -7,6 +7,9 @@
 
     /*@ngInject*/
     function apiService($http, APIURL){
+      var OMD_API_URL = "http://www.omdbapi.com/";
+      var OMD_API_KEY = "bd9be61b";
+
       return {
         getMovies: getMovies,
         getSeries: getSeries,
@@ -15,15 +18,15 @@
       };
 
       function getMovies(){
-        return $http.get('http://www.omdbapi.com/?apikey=bd9be61b&s=Star%20Wars&type=movie');
+        return $http.get(OMD_API_URL + '?apikey=' + OMD_API_KEY + '&s=Star%20Wars&type=movie');
       }
 
       function getSeries(id){
-        return $http.get('http://www.omdbapi.com/?apikey=bd9be61b&t=Game%20of%20Thrones&Season=' +id);
+        return $http.get(OMD_API_URL + '?apikey=' + OMD_API_KEY + '&t=Game%20of%20Thrones&Season=' +id);
       }
 
       function getGameOfThrones(){
-        return $http.get('http://www.omdbapi.com/?apikey=bd9be61b&t=Game%20of%20Thrones');
+        return $http.get(OMD_API_URL + '?apikey=' + OMD_API_KEY + '&t=Game%20of%20Thrones');
       }
 
       function getFoods(){
