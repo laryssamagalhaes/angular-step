@@ -35,8 +35,8 @@
       function getMovieSelected() {
         var movieSelected = '';
 
-        movies.find(function(movie){
-          if (movie.id === parseInt(movieId)) {
+        movies.map(function(movie){
+          if (movie.imdbID === movieId) {
              movieSelected = movie;
           }
         });
@@ -55,8 +55,8 @@
       function getFoodSelected() {
         var foodSelected = '';
 
-        foods.find(function(food){
-          if (food.id === parseInt(foodId)) {
+        foods.map(function(food){
+          if(food.imdbID === parseInt(foodId)) {
             foodSelected = food;
           }
         });

@@ -24,7 +24,7 @@
      <md-radio-group ng-model="$ctrl.selected" ng-change="$ctrl.showEpisodes()" layout="row"  layout-xs="column" layout-align="space-between">
         <div layout="column">
           <p class="size-title">Your favorite Star Wars Movie</p>
-          <md-radio-button value="{{$ctrl.starWars.id}}" class="md-primary" ng-disabled="true">{{$ctrl.starWars.name}}</md-radio-button>
+          <md-radio-button value="{{$ctrl.starWars.id}}" class="md-primary" ng-disabled="true">{{$ctrl.starWars.Title}}</md-radio-button>
         </div>
         <div layout="column">
           <p class="size-title">Your favorite Got Season</p>
@@ -32,7 +32,7 @@
         </div>
         <div layout="column">
           <p class="size-title">Your kind of food</p>   
-          <md-radio-button value="{{$ctrl.food.id}}" class="md-primary" ng-disabled="true">{{$ctrl.food.name}}</md-radio-button>
+          <md-radio-button value="{{$ctrl.food.id}}" class="md-primary" ng-disabled="true">{{$ctrl.food.Title}}</md-radio-button>
         </div>
     </md-radio-group>
   </md-content>

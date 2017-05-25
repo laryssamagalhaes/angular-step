@@ -13,25 +13,22 @@
           ctrl.episodes = '';
           ctrl.model = answerService.getGotSeason();
 
-          apiService.getSeries()
+           apiService.getGameOfThrones()
             .then(function(results){
-              ctrl.series = results.data;
-              ctrl.showEpisodes();
+              ctrl.gameOfThrones = results.data;
           });
 
-          ctrl.showEpisodes = function() {
-            var episodesSelected = [];
+          ctrl.getSeason = function(){
+            var id = ctrl.model;
 
-            ctrl.series.find(function(serie){
-              if (serie.id === parseInt(ctrl.model)) {
-                episodesSelected = serie.episodes;
-              }
+            apiService.getSeries(id)
+            .then(function(results){
+              ctrl.episodes = results.data.Episodes;
+              answerService.saveGotSeason(ctrl.model);
             });
-
-            ctrl.episodes = episodesSelected.length > 0 ? episodesSelected : '';
-
-            answerService.saveGotSeason(ctrl.model);
           };
-        } 
+
+        ctrl.getSeason();
+      }
  })();
  

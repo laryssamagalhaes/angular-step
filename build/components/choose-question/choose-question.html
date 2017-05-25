@@ -5,12 +5,12 @@
       <div layout="row" layout-xs="column" layout-wrap>
         <div flex="25" flex-xs="100" layout-align="center" ng-repeat="data in $ctrl.datas">
           <div layout="row" layout-align="center center">
-            <img class="space-radio" ng-class="{'img-radius': $ctrl.radius}" width="110px" height="168px" ng-src="{{data.url}}">
+            <img class="space-radio" ng-class="{'img-radius': $ctrl.radius}" width="110px" height="168px" ng-src="{{data.Poster}}">
           </div>
           <div layout="row" layout-align="center center">
-            <md-radio-button value="{{data.id}}" class="md-primary"></md-radio-button>
+            <md-radio-button value="{{data.imdbID}}" class="md-primary"></md-radio-button>
           </div>
-          <p class="center">{{data.name}}</p>
+          <p class="center">{{data.Title}}</p>
         </div>
       </div>
     </md-radio-group>
